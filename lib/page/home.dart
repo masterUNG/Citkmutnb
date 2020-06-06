@@ -36,11 +36,11 @@ class _HomeState extends State<Home> {
 
   BottomNavigationBarItem depaermentBottom() {
     return BottomNavigationBarItem(
-      icon: Icon(
-        Icons.settings,
-        size: 48.0,
-        color: Colors.white,
-      ),
+      icon: Container(
+        width: 48.0,
+        height: 48.0,
+        child: Image.asset('images/dep.png'),
+      ),activeIcon: Container(width: 48.0,height: 48.0,child: Image.asset('images/adep.png'), ),
       title: Text(
         'ภาควิชา',
         style: TextStyle(color: Colors.white),
@@ -50,11 +50,11 @@ class _HomeState extends State<Home> {
 
   BottomNavigationBarItem newsBottom() {
     return BottomNavigationBarItem(
-      icon: Icon(
-        Icons.perm_identity,
-        size: 48.0,
-        color: Colors.white,
-      ),
+      icon: Container(
+        width: 48.0,
+        height: 48.0,
+        child: Image.asset('images/news.png'),
+      ),activeIcon: Container(width: 48.0,height: 48.0,child: Image.asset('images/anews.png'), ),
       title: Text(
         'ข่าวสาร',
         style: TextStyle(color: Colors.white),
@@ -64,11 +64,11 @@ class _HomeState extends State<Home> {
 
   BottomNavigationBarItem mapBottom() {
     return BottomNavigationBarItem(
-      icon: Icon(
-        Icons.map,
-        size: 48.0,
-        color: Colors.white,
-      ),
+      icon: Container(
+        width: 48.0,
+        height: 48.0,
+        child: Image.asset('images/map.png'),
+      ),activeIcon: Container(width: 48.0,height: 48.0,child: Image.asset('images/amap.png'), ),
       title: Text(
         'แผนที่',
         style: TextStyle(color: Colors.white),
@@ -78,11 +78,11 @@ class _HomeState extends State<Home> {
 
   BottomNavigationBarItem calendarBottom() {
     return BottomNavigationBarItem(
-      icon: Icon(
-        Icons.calendar_today,
-        size: 48.0,
-        color: Colors.white,
-      ),
+      icon: Container(
+        width: 48.0,
+        height: 48.0,
+        child: Image.asset('images/cadel.png'),
+      ),activeIcon: Container(width: 48.0,height: 48.0,child: Image.asset('images/acadel.png'), ),
       title: Text(
         'ปฏทิน',
         style: TextStyle(color: Colors.white),
