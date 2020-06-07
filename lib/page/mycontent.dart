@@ -12,6 +12,24 @@ class _MycontentState extends State<Mycontent> {
       appBar: AppBar(
         title: Text('หลักสูตร'),
       ),
+      body: Column(
+        children: <Widget>[
+          buttonTop(),
+        ],
+      ),
+    );
+  }
+
+  Widget buttonTop() {
+    return Row(mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Container(width: 250.0,
+          child: RaisedButton(
+            onPressed: () {},
+            child: Text('ปริญญาตรี'),
+          ),
+        ),
+      ],
     );
   }
 }
