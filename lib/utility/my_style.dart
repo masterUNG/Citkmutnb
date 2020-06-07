@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 
 class Mystyle {
 
+
+  Widget showProgress(){
+    return Center(child: CircularProgressIndicator(),);
+  }
+
+
 Widget mySizeBox(double height){
   return SizedBox(height: height);
 }

@@ -1,3 +1,5 @@
+import 'package:citkmutnb/page/show_list_degee.dart';
+import 'package:citkmutnb/utility/my_style.dart';
 import 'package:flutter/material.dart';
 
 class Mycontent extends StatefulWidget {
@@ -14,19 +16,83 @@ class _MycontentState extends State<Mycontent> {
       ),
       body: Column(
         children: <Widget>[
+          Mystyle().mySizeBox(50.0),
           buttonTop(),
+          mediumbuttom(),
+          buttonButton(),
         ],
       ),
     );
   }
 
   Widget buttonTop() {
-    return Row(mainAxisAlignment: MainAxisAlignment.center,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Container(width: 250.0,
+        Container(
+          width: 250.0,
           child: RaisedButton(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            color: Colors.orange,
+            onPressed: () => routeToDegee(0),
+            child: Text(
+              'ปริญญาโท',
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  void routeToDegee(int index){
+    MaterialPageRoute route = MaterialPageRoute(builder:(context) => ShowListDegee(degeeAInt: index,), );
+    Navigator.push(context, route);
+  }
+
+  Widget mediumbuttom() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Container(
+          width: 250.0,
+          child: RaisedButton(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            color: Colors.orange,
+            onPressed: () => routeToDegee(1),
+            child: Text(
+              'ปริญญาตรี',
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget buttonButton() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Container(
+          width: 250.0,
+          child: RaisedButton(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            color: Colors.orange,
             onPressed: () {},
-            child: Text('ปริญญาตรี'),
+            child: Text(
+              'ประกาศนียบัตรวิชาชีพ',
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            ),
           ),
         ),
       ],
