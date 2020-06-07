@@ -55,9 +55,34 @@ class _ShowListDegeeState extends State<ShowListDegee> {
       ),
       body: departments.length == 0
           ? Mystyle().showProgress()
-          : ListView.builder(itemCount: departments.length,
-              itemBuilder: (context, index) => Text(departments[index]),
+          : ListView.builder(
+              itemCount: departments.length,
+              itemBuilder: (context, index) => showcontant(index),
             ),
     );
   }
+
+  Widget showcontant(int index) => Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.only(top: 4.0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadiusDirectional.circular(15.0),
+              color: Colors.orange,
+            ),
+            width: 250.0,
+            child: ListTile(
+              title: Text(
+                departments[index],
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              trailing: Icon(Icons.keyboard_arrow_down, color: Colors.white,),
+            ),
+          ),
+        ],
+      );
 }
