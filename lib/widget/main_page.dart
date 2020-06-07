@@ -1,4 +1,7 @@
 import 'package:citkmutnb/page/history.dart';
+import 'package:citkmutnb/page/myboss.dart';
+import 'package:citkmutnb/page/mycontent.dart';
+import 'package:citkmutnb/page/person.dart';
 import 'package:citkmutnb/utility/my_style.dart';
 import 'package:flutter/material.dart';
 
@@ -20,8 +23,8 @@ class _MainPageState extends State<MainPage> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 createItem('item1', History()),
-                createItem('item2', History()),
-                createItem('item3', History())
+                createItem('item2', Myboss()),
+                createItem('item3', Mycontent())
               ],
             ),
             mySizebox(),
@@ -52,6 +55,8 @@ class _MainPageState extends State<MainPage> {
     );
   }
 
+
+  //เมธอดที่ทำหน้าที่ ย้ายการทำงานไปหน้า ที่เราคลิกไอเทม
   Widget createItem(String nameImage, Widget widget) => GestureDetector(
         onTap: () {
           MaterialPageRoute route = MaterialPageRoute(builder: (context) => widget,);
