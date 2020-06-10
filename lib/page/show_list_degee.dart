@@ -13,8 +13,8 @@ class ShowListDegee extends StatefulWidget {
 }
 
 class _ShowListDegeeState extends State<ShowListDegee> {
-  List<String> listTitles = ['ปริญญาโท', 'ปริญญาตรี'];
-  List<String> listdegree = ['ป.โท', 'ป.ตรี'];
+  List<String> listTitles = ['ปริญญาเอก','ปริญญาโท', 'ปริญญาตรี'];
+  List<String> listdegree = ['ป.เอก','ป.โท', 'ป.ตรี'];
   int index;
 
   List<String> departments = List();
@@ -66,12 +66,12 @@ class _ShowListDegeeState extends State<ShowListDegee> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.only(top: 4.0),
+            margin: EdgeInsets.only(top: 7.0),
             decoration: BoxDecoration(
               borderRadius: BorderRadiusDirectional.circular(15.0),
               color: Colors.orange,
             ),
-            width: 250.0,
+            width: 320.0,
             child: ListTile(
               title: Text(
                 departments[index],

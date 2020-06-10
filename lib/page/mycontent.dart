@@ -17,8 +17,9 @@ class _MycontentState extends State<Mycontent> {
       body: Column(
         children: <Widget>[
           Mystyle().mySizeBox(50.0),
-          buttonTop(),
-          mediumbuttom(),
+          buttonTop(),Mystyle().mySizeBox(15.0),
+          buttonMediumTop(),Mystyle().mySizeBox(15.0),
+          mediumbuttom(),Mystyle().mySizeBox(15.0),
           buttonButton(),
         ],
       ),
@@ -30,13 +31,45 @@ class _MycontentState extends State<Mycontent> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Container(
-          width: 250.0,
+          width: 320.0, height: 40.0,
           child: RaisedButton(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15.0),
             ),
             color: Colors.orange,
             onPressed: () => routeToDegee(0),
+            child: Text(
+              'ปริญญาเอก',
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  void routeToDegee(int index) {
+    MaterialPageRoute route = MaterialPageRoute(
+      builder: (context) => ShowListDegee(
+        degeeAInt: index,
+      ),
+    );
+    Navigator.push(context, route);
+  }
+
+  Widget buttonMediumTop() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Container(
+          width: 320.0,height: 40.0,
+          child: RaisedButton(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            color: Colors.orange,
+            onPressed: () => routeToDegee(1),
             child: Text(
               'ปริญญาโท',
               style:
@@ -48,23 +81,18 @@ class _MycontentState extends State<Mycontent> {
     );
   }
 
-  void routeToDegee(int index){
-    MaterialPageRoute route = MaterialPageRoute(builder:(context) => ShowListDegee(degeeAInt: index,), );
-    Navigator.push(context, route);
-  }
-
   Widget mediumbuttom() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Container(
-          width: 250.0,
+          width: 320.0,height: 40.0,
           child: RaisedButton(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15.0),
             ),
             color: Colors.orange,
-            onPressed: () => routeToDegee(1),
+            onPressed: () => routeToDegee(2),
             child: Text(
               'ปริญญาตรี',
               style:
@@ -81,7 +109,7 @@ class _MycontentState extends State<Mycontent> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Container(
-          width: 250.0,
+          width: 320.0,height: 40.0,
           child: RaisedButton(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15.0),
