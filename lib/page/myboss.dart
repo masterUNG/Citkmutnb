@@ -14,14 +14,21 @@ class _MybossState extends State<Myboss> {
         title: Text('คณะผู้บริหาร'),
       ),
       body: SingleChildScrollView(
-              child: Column(
+        child: Column(
           children: <Widget>[
-            row1(),Mystyle().mySizeBox(20.0),
-            row2(),Mystyle().mySizeBox(20.0),
-            row3(),Mystyle().mySizeBox(20.0),
-            row4(),Mystyle().mySizeBox(20.0),
-            row5(),Mystyle().mySizeBox(20.0),
-            row6(),Mystyle().mySizeBox(20.0),
+            Mystyle().mySizeBox(20.0),
+            row1(),
+            Mystyle().mySizeBox(20.0),
+            row2(),
+            Mystyle().mySizeBox(20.0),
+            row3(),
+            Mystyle().mySizeBox(20.0),
+            row4(),
+            Mystyle().mySizeBox(20.0),
+            row5(),
+            Mystyle().mySizeBox(20.0),
+            row6(),
+            Mystyle().mySizeBox(20.0),
           ],
         ),
       ),
