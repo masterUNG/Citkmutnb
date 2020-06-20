@@ -10,7 +10,7 @@ class _StoryState extends State<Story> {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.all(40.0),
+      padding: EdgeInsets.all(25),
       children: <Widget>[
         Mystyle().showTitle('ปรัชญา'),
         story1(),

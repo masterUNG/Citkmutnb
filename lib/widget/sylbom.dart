@@ -10,7 +10,7 @@ class _SylbomState extends State<Sylbom> {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.all(40.0),
+      padding: EdgeInsets.all(25),
       children: <Widget>[
         showlogo(),
         Mystyle().showTitle('คัตเตอร์'),

@@ -24,7 +24,7 @@ class _MainPageState extends State<MainPage> {
               children: <Widget>[
                 createItem('item1', History()),
                 createItem('item2', Myboss()),
-                createItem('item3', Mycontent())
+                createItem('item3', Mycontent()),
               ],
             ),
             mySizebox(),
@@ -33,7 +33,7 @@ class _MainPageState extends State<MainPage> {
               children: <Widget>[
                 createItem('item4', History()),
                 createItem('item5', History()),
-                createItem('item6', History())
+                createItem('item6', History()),
               ],
             ),
             mySizebox(),
