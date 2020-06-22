@@ -14,12 +14,15 @@ class _HistoryState extends State<History> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        appBar: AppBar(
+        appBar: AppBar(title: Text('ประวัติ'),
           bottom: TabBar(
             tabs: <Widget>[
-              Text('ประวัติ'),
-              Text('ปรัชญา'),
-              Text('สัญญาลักษณ์'),
+              Tab(icon: Icon(Icons.camera), text: 'ประวัติ',),
+              Tab(icon: Icon(Icons.camera), text: 'ปรัชญา',),
+              Tab(icon: Icon(Icons.camera), text: 'สัญญาลักษณ์',),
+              // Text('ประวัติ'),
+              // Text('ปรัชญา'),
+              // Text('สัญญาลักษณ์'),
             ],
           ),
         ),

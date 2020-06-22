@@ -2,6 +2,7 @@ import 'package:citkmutnb/page/history.dart';
 import 'package:citkmutnb/page/myboss.dart';
 import 'package:citkmutnb/page/mycontent.dart';
 import 'package:citkmutnb/page/person.dart';
+import 'package:citkmutnb/page/service.dart';
 import 'package:citkmutnb/utility/my_style.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +32,7 @@ class _MainPageState extends State<MainPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
-                createItem('item4', History()),
+                createItem('item4', Service()),
                 createItem('item5', History()),
                 createItem('item6', History()),
               ],
