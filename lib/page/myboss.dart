@@ -95,8 +95,8 @@ class _MybossState extends State<Myboss> {
   }
 
   Container createImage(String string) => Container(
-        width: 150.0,
-        height: 200.0,
+        width: 180.0,
+        height: 230.0,
         child: Image.asset('images/$string.png'),
       );
 }

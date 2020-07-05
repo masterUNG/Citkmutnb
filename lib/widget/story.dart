@@ -38,7 +38,7 @@ class _StoryState extends State<Story> {
 
   // Text story1() => Text('');
   Text story1() => Text(
-      'ผลิตวิศวกรและนักเทคโนโลยีเฉพาะทางเพื่อพัฒนาอุตสาหกรรมในระดับนานาชาติ ');
+      'ผลิตวิศวกรและนักเทคโนโลยีเฉพาะทางเพื่อพัฒนาอุตสาหกรรมในระดับนานาชาติ');
   Text story2() => Text(
       '(To Produce Engineers and Technologists Specialized in Specific Fields to Develop the Industries toward International Forum)');
   Text story3() =>

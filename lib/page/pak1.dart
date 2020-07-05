@@ -1,3 +1,5 @@
+import 'package:citkmutnb/widget/classroompak1.dart';
+import 'package:citkmutnb/widget/detailpak1.dart';
 import 'package:flutter/material.dart';
 
 class Pak1 extends StatefulWidget {
@@ -8,44 +10,92 @@ class Pak1 extends StatefulWidget {
 class _Pak1State extends State<Pak1> {
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: Scaffold(
-        body: CustomScrollView(
-          slivers: <Widget>[
-            SliverAppBar(
-              title: Text('ภาควิชาสาขาเครื่องกล'),
-              snap: true,
-              floating: true,
-              elevation: 6,
-              expandedHeight: 210,
-              pinned: true,
-              flexibleSpace: FlexibleSpaceBar(
-                background: Image.asset(
-                  'images/Pak1.png',
-                  fit: BoxFit.cover,
+    return Scaffold(
+      body: DefaultTabController(
+        length: 2,
+        child: NestedScrollView(
+          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+            return <Widget>[
+              SliverAppBar(
+                title: Text('ภาควิชาเทคโนโลยีวิศวกรรมอิเล็กทรอนิกส์'),
+                snap: true,
+                floating: true,
+                elevation: 6,
+                expandedHeight: 210,
+                pinned: true,
+                flexibleSpace: FlexibleSpaceBar(
+                  background: Image.asset(
+                    'images/Pak7.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
-            ),
-            SliverPersistentHeader(
-              delegate: _SliverAppBarDelegate(
-                TabBar(
-                  labelColor: Colors.blue,
-                  tabs: [
-                    Tab(
-                      text: 'รายละเอียด',
-                    ),
-                    Tab(
-                      text: 'ห้องเรียน',
-                    ),
-                  ],
+              SliverPersistentHeader(
+                delegate: _SliverAppBarDelegate(
+                  TabBar(
+                    labelColor: Colors.blue,
+                    tabs: [
+                      Tab(
+                        text: 'รายละเอียด',
+                      ),
+                      Tab(
+                        text: 'ห้องเรียน',
+                      ),
+                    ],
+                  ),
                 ),
+                pinned: true,
               ),
-            ),
-          ],
+            ];
+          },
+          body: TabBarView(
+            children: <Widget>[
+              Detailpak1(),
+              Classroompak1(),
+            ],
+          ),
         ),
       ),
     );
+    // return DefaultTabController(
+    //   length: 2,
+    //   child: Scaffold(
+    //     body: CustomScrollView(
+    //       slivers: <Widget>[
+    //         SliverAppBar(
+    //           title: Text('ภาควิชาเทคโนโลยีวิศวกรรมอิเล็กทรอนิกส์'),
+    //           snap: true,
+    //           floating: true,
+    //           elevation: 6,
+    //           expandedHeight: 210,
+    //           pinned: true,
+    //           flexibleSpace: FlexibleSpaceBar(
+    //             background: Image.asset(
+    //               'images/Pak7.png',
+    //               fit: BoxFit.cover,
+    //             ),
+    //           ),
+    //         ),
+    //         SliverPersistentHeader(
+    //           delegate: _SliverAppBarDelegate(
+    //             TabBar(
+    //               labelColor: Colors.blue,
+    //               tabs: [
+    //                 Tab(
+    //                   text: 'รายละเอียด',
+    //                 ),
+    //                 Tab(
+    //                   text: 'ห้องเรียน',
+    //                 ),
+    //               ],
+    //             ),
+    //           ),
+    //           pinned: true,
+    //         ),
+    //       ],
+    //     ),
+    //   ),
+    // );
   }
 }
 
