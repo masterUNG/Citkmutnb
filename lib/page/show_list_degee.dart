@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:citkmutnb/page/mycontent.dart';
+import 'package:citkmutnb/page/show_pdf.dart';
 import 'package:citkmutnb/utility/my_constant.dart';
 import 'package:citkmutnb/utility/my_style.dart';
 import 'package:dio/dio.dart';
@@ -98,23 +99,6 @@ class _ShowListDegeeState extends State<ShowListDegee> {
             width: 320.0,
             child: Column(
               children: <Widget>[
-                // ListTile(
-                //   title: Text(
-                //     departments[index],
-                //     style: TextStyle(
-                //       color: Colors.white,
-                //       fontWeight: FontWeight.bold,
-                //     ),
-                //   ),
-                //   trailing: Icon(
-                //     Icons.keyboard_arrow_down,
-                //     color: Colors.white,
-                //   ),
-                //   onTap: () {
-                //     print('You Click index ==>> $index');
-                //   },
-                // ),
-                // showExpand(),
                 ExpansionTile(
                   title: Text(
                     departments[index],
@@ -144,10 +128,26 @@ class _ShowListDegeeState extends State<ShowListDegee> {
     var result = json.decode(response.data);
     for (var map in result) {
       String string = map['file_name'];
-      Text text = Text(string);
+      Widget text = ListTile(
+        onTap: () {
+          print('You click == $string');
+          MaterialPageRoute route = MaterialPageRoute(
+            builder: (context) => ShowPdf(namePDF: string,catigory: 'file_degree',),
+          );
+          Navigator.push(context, route);
+        },
+        leading: Icon(
+          Icons.brightness_5,
+          color: Colors.white,
+        ),
+        title: Text(
+          string,
+          style: TextStyle(color: Colors.white),
+        ),
+      );
       fileNamesWidget.add(text);
       // print(string);
-      
+
     }
     return fileNamesWidget;
   }

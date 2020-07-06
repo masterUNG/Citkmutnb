@@ -1,5 +1,7 @@
+import 'package:citkmutnb/page/show_list_download.dart';
 import 'package:citkmutnb/utility/my_style.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Service extends StatefulWidget {
   @override
@@ -36,7 +38,9 @@ class _ServiceState extends State<Service> {
               borderRadius: BorderRadius.circular(15.0),
             ),
             color: Colors.orange,
-            onPressed: () {},
+            onPressed: () {
+              launchWebsite();
+            },
             child: Text(
               'คลังข้อสอบ',
               style:
@@ -60,7 +64,11 @@ class _ServiceState extends State<Service> {
               borderRadius: BorderRadius.circular(15.0),
             ),
             color: Colors.orange,
-            onPressed: () {},
+            onPressed: () {
+              MaterialPageRoute route = MaterialPageRoute(
+                builder: (context) => ShowiistDownload(),
+              );Navigator.push(context, route);
+            },
             child: Text(
               'ดาวน์โหลด',
               style:
@@ -70,5 +78,12 @@ class _ServiceState extends State<Service> {
         ),
       ],
     );
+  }
+
+  Future<Null> launchWebsite() async {
+    String url = 'http://cit.kmutnb.ac.th/examination/';
+    if (await canLaunch(url)) {
+      await launch(url);
+    }
   }
 }
