@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:citkmutnb/page/mycontent.dart';
 import 'package:citkmutnb/utility/my_constant.dart';
 import 'package:citkmutnb/utility/my_style.dart';
 import 'package:dio/dio.dart';
@@ -15,6 +16,8 @@ class ShowListDegee extends StatefulWidget {
 class _ShowListDegeeState extends State<ShowListDegee> {
   List<String> listTitles = ['ปริญญาเอก', 'ปริญญาโท', 'ปริญญาตรี'];
   List<String> listdegree = ['ป.เอก', 'ป.โท', 'ป.ตรี'];
+  List<String> department = List();
+  List<List<Widget>> listFileNameWidget = List();
   int index;
 
   List<String> departments = List();
@@ -35,12 +38,16 @@ class _ShowListDegeeState extends State<ShowListDegee> {
 
       if (response.toString() != 'null') {
         var result = json.decode(response.data);
-        print('resilt = $result');
+        // print('resilt = $result');
         for (var json in result) {
           String string = json['department'];
+
+          List<Widget> widgets = await createSetFileName(string);
+
           setState(() {
             if (checkDepartment(string)) {
               departments.add(string);
+              listFileNameWidget.add(widgets);
             }
           });
         }
@@ -50,18 +57,16 @@ class _ShowListDegeeState extends State<ShowListDegee> {
     }
   }
 
-  bool checkDepartment(String string){
+  bool checkDepartment(String string) {
     bool result = true;
 
-    if (departments.length !=0) {
-      
+    if (departments.length != 0) {
       for (var department in departments) {
         if (string == department) {
           result = false;
         }
       }
-      
-    }  //if1
+    } //if1
 
     return result;
   }
@@ -91,23 +96,59 @@ class _ShowListDegeeState extends State<ShowListDegee> {
               color: Colors.orange,
             ),
             width: 320.0,
-            child: ListTile(
-              title: Text(
-                departments[index],
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
+            child: Column(
+              children: <Widget>[
+                // ListTile(
+                //   title: Text(
+                //     departments[index],
+                //     style: TextStyle(
+                //       color: Colors.white,
+                //       fontWeight: FontWeight.bold,
+                //     ),
+                //   ),
+                //   trailing: Icon(
+                //     Icons.keyboard_arrow_down,
+                //     color: Colors.white,
+                //   ),
+                //   onTap: () {
+                //     print('You Click index ==>> $index');
+                //   },
+                // ),
+                // showExpand(),
+                ExpansionTile(
+                  title: Text(
+                    departments[index],
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  children: listFileNameWidget[index],
                 ),
-              ),
-              trailing: Icon(
-                Icons.keyboard_arrow_down,
-                color: Colors.white,
-              ),
-              onTap: () {
-                print('You Click index ==>> $index');
-              },
+              ],
             ),
           ),
         ],
       );
+
+  Widget showExpand() {
+    return Text('File Name');
+  }
+
+  Future<List<Widget>> createSetFileName(String string) async {
+    List<Widget> fileNamesWidget = List();
+    String url =
+        '${MyConstant().domain}/cit/getDegreeWhereDepartment.php?isAdd=true&degree=${listdegree[index]}&department=$string';
+    Response response = await Dio().get(url);
+    // print('res = $response');
+    var result = json.decode(response.data);
+    for (var map in result) {
+      String string = map['file_name'];
+      Text text = Text(string);
+      fileNamesWidget.add(text);
+      // print(string);
+      
+    }
+    return fileNamesWidget;
+  }
 }
