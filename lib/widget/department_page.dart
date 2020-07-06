@@ -1,4 +1,5 @@
 import 'package:citkmutnb/page/pak1.dart';
+import 'package:citkmutnb/utility/my_style.dart';
 //import 'package:citkmutnb/widget/pak1.dart';
 import 'package:flutter/material.dart';
 
@@ -16,36 +17,36 @@ class _DepartmentpageState extends State<Departmentpage> {
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            createimg(('Pak1'), Pak1()),
-            createimg(('Pak2'), Pak1()),
+            createimg(('Pak1'), Pak1(nameImage: 'Pak1', title: 'เครื่องกล',)),
+            createimg(('Pak2'), Pak1(nameImage: 'Pak2', title: 'เครื่องกล2',)),
           ],
-        ),
+        ),Mystyle().fixSizeBox(),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            createimg(('Pak3'), Pak1()),
-            createimg(('Pak4'), Pak1()),
+            createimg(('Pak3'), Pak1(nameImage: 'Pak3', title: 'เครื่องกล222',)),
+            createimg(('Pak4'), Pak1(nameImage: 'Pak4', title: 'เครื่องกล5',)),
           ],
-        ),
+        ),Mystyle().fixSizeBox(),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            createimg(('Pak5'), Pak1()),
-            createimg(('Pak6'), Pak1()),
+            createimg(('Pak5'), Pak1(nameImage: 'Pak5', title: 'เครื่องกล4',)),
+            createimg(('Pak6'), Pak1(nameImage: 'Pak6', title: 'เครื่องกล6',)),
           ],
-        ),
+        ),Mystyle().fixSizeBox(),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            createimg(('Pak7'), Pak1()),
-            createimg(('Pak8'), Pak1()),
+            createimg(('Pak7'), Pak1(nameImage: 'Pak7', title: 'เครื่องกล7',)),
+            createimg(('Pak8'), Pak1(nameImage: 'Pak8', title: 'เครื่องกล75',)),
           ],
-        ),
+        ),Mystyle().fixSizeBox(),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            createimg(('Pak9'), Pak1()),
-            createimg(('Pak10'), Pak1()),
+            createimg(('Pak9'), Pak1(nameImage: 'Pak9', title: 'เครื่องกล354',)),
+            createimg(('Pak10'), Pak1(nameImage: 'Pak10', title: 'เครื่องกล412',)),
           ],
         ),
       ],

@@ -137,7 +137,7 @@ class _ShowListDegeeState extends State<ShowListDegee> {
           Navigator.push(context, route);
         },
         leading: Icon(
-          Icons.brightness_5,
+          Icons.library_books,
           color: Colors.white,
         ),
         title: Text(

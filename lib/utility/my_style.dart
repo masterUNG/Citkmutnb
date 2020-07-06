@@ -12,6 +12,10 @@ Widget mySizeBox(double height){
   return SizedBox(height: height);
 }
 
+Widget fixSizeBox(){
+  return SizedBox(height: 16, width: 16,);
+}
+
 
   Widget myBG() {
     return Column(
