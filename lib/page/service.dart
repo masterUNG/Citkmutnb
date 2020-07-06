@@ -36,7 +36,7 @@ class _ServiceState extends State<Service> {
               borderRadius: BorderRadius.circular(15.0),
             ),
             color: Colors.orange,
-            // onPressed: () => routeToDegee(0),
+            onPressed: () {},
             child: Text(
               'คลังข้อสอบ',
               style:
@@ -60,7 +60,7 @@ class _ServiceState extends State<Service> {
               borderRadius: BorderRadius.circular(15.0),
             ),
             color: Colors.orange,
-            // onPressed: () => routeToDegee(1),
+            onPressed: () {},
             child: Text(
               'ดาวน์โหลด',
               style:

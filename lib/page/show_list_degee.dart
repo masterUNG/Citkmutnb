@@ -13,8 +13,8 @@ class ShowListDegee extends StatefulWidget {
 }
 
 class _ShowListDegeeState extends State<ShowListDegee> {
-  List<String> listTitles = ['ปริญญาเอก','ปริญญาโท', 'ปริญญาตรี'];
-  List<String> listdegree = ['ป.เอก','ป.โท', 'ป.ตรี'];
+  List<String> listTitles = ['ปริญญาเอก', 'ปริญญาโท', 'ปริญญาตรี'];
+  List<String> listdegree = ['ป.เอก', 'ป.โท', 'ป.ตรี'];
   int index;
 
   List<String> departments = List();
@@ -29,7 +29,7 @@ class _ShowListDegeeState extends State<ShowListDegee> {
   Future<Null> redaData() async {
     try {
       String url =
-          '${MyConstant().domain}/cit/getDegreeWhereId.php?isAdd=true&degree=${listdegree[index]}';
+          '${MyConstant().domain}/cit/getDegreeWhereDegree.php?isAdd=true&degree=${listdegree[index]}';
       Response response = await Dio().get(url);
       print('respone = $response');
 
@@ -37,14 +37,33 @@ class _ShowListDegeeState extends State<ShowListDegee> {
         var result = json.decode(response.data);
         print('resilt = $result');
         for (var json in result) {
+          String string = json['department'];
           setState(() {
-            departments.add(json['department']);
+            if (checkDepartment(string)) {
+              departments.add(string);
+            }
           });
         }
       }
     } catch (e) {
       print('e = ${e.toString()}');
     }
+  }
+
+  bool checkDepartment(String string){
+    bool result = true;
+
+    if (departments.length !=0) {
+      
+      for (var department in departments) {
+        if (string == department) {
+          result = false;
+        }
+      }
+      
+    }  //if1
+
+    return result;
   }
 
   @override
@@ -80,7 +99,13 @@ class _ShowListDegeeState extends State<ShowListDegee> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              trailing: Icon(Icons.keyboard_arrow_down, color: Colors.white,),
+              trailing: Icon(
+                Icons.keyboard_arrow_down,
+                color: Colors.white,
+              ),
+              onTap: () {
+                print('You Click index ==>> $index');
+              },
             ),
           ),
         ],
