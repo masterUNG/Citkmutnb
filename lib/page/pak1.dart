@@ -13,7 +13,7 @@ class Pak1 extends StatefulWidget {
 
 class _Pak1State extends State<Pak1> {
   String nameImage, title, category;
-
+  
   @override
   void initState() {
     // TODO: implement initState
@@ -69,7 +69,9 @@ class _Pak1State extends State<Pak1> {
               Detailpak1(
                 category: category,
               ),
-              ClassRoomPak1(category: category,),
+              ClassRoomPak1(
+                category: category,
+              ),
             ],
           ),
         ),

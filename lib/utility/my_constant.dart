@@ -1,5 +1,5 @@
 class MyConstant {
-  String domain = 'http://eeb8c5eaac21.ngrok.io';
+  String domain = 'http://0088700786a9.ngrok.io';
 
   List<String> categorys = [
     'เครื่องกล',
@@ -13,4 +13,19 @@ class MyConstant {
     'การเชื่อม',
     'เตรียมวิศวกรรมไทย-เยอรมัน'
   ];
+
+  List<String> urlAPIroom = [
+    'เครื่องกล',
+    'ไฟฟ้า',
+    'โยธา',
+    'วิทย์ประยุกต์และสังคม',
+    'อุตสาหการ',
+    'เครื่องต้นกำลัง',
+    '/cit/getAllEnet.php',
+    'การจัดการเทคโนฯและสารสนเทศ',
+    'การเชื่อม',
+    'เตรียมวิศวกรรมไทย-เยอรมัน'
+  ];
+
+
 }
