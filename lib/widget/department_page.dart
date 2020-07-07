@@ -9,6 +9,19 @@ class Departmentpage extends StatefulWidget {
 }
 
 class _DepartmentpageState extends State<Departmentpage> {
+  List<String> categorys = [
+    'เครื่องกล',
+    'ไฟฟ้า',
+    'โยธา',
+    'วิทย์ประยุกต์และสังคม',
+    'อุตสาหการ',
+    'เครื่องต้นกำลัง',
+    'อิเล็กทรอนิกส์',
+    'การจัดการเทคโนฯและสารสนเทศ',
+    'การเชื่อม',
+    'เตรียมวิศวกรรมไทย-เยอรมัน'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -17,36 +30,100 @@ class _DepartmentpageState extends State<Departmentpage> {
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            createimg(('Pak1'), Pak1(nameImage: 'Pak1', title: 'เครื่องกล',)),
-            createimg(('Pak2'), Pak1(nameImage: 'Pak2', title: 'เครื่องกล2',)),
+            createimg(
+                ('Pak1'),
+                Pak1(
+                  nameImage: 'Pak1',
+                  title: 'ภาควิชาเทคโนโลยีวิศวกรรมเครื่องกล',
+                  category: categorys[0],
+                )),
+            createimg(
+                ('Pak2'),
+                Pak1(
+                  nameImage: 'Pak2',
+                  title: 'ภาควิชาเทคโนโลยีวิศวกรรมไฟฟ้า',
+                  category: categorys[1],
+                )),
           ],
-        ),Mystyle().fixSizeBox(),
+        ),
+        Mystyle().fixSizeBox(),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            createimg(('Pak3'), Pak1(nameImage: 'Pak3', title: 'เครื่องกล222',)),
-            createimg(('Pak4'), Pak1(nameImage: 'Pak4', title: 'เครื่องกล5',)),
+            createimg(
+                ('Pak3'),
+                Pak1(
+                  nameImage: 'Pak3',
+                  title: 'ภาควิชาเทคโนโลยีวิศวกรรมโยธาและสิ่งแวดล้อม',
+                  category: categorys[2],
+                )),
+            createimg(
+                ('Pak4'),
+                Pak1(
+                  nameImage: 'Pak4',
+                  title: 'ภาควิชาวิทยาศาสตร์และสังคม',
+                  category: categorys[3],
+                )),
           ],
-        ),Mystyle().fixSizeBox(),
+        ),
+        Mystyle().fixSizeBox(),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            createimg(('Pak5'), Pak1(nameImage: 'Pak5', title: 'เครื่องกล4',)),
-            createimg(('Pak6'), Pak1(nameImage: 'Pak6', title: 'เครื่องกล6',)),
+            createimg(
+                ('Pak5'),
+                Pak1(
+                  nameImage: 'Pak5',
+                  title: 'ภาควิชาเทคโนโลยีวิศวกรรมอุตสาหการ',
+                  category: categorys[4],
+                )),
+            createimg(
+                ('Pak6'),
+                Pak1(
+                  nameImage: 'Pak6',
+                  title: 'ภาควิชาเทคโนโลยีวิศวกรรมเครื่องต้นกำลัง',
+                  category: categorys[5],
+                )),
           ],
-        ),Mystyle().fixSizeBox(),
+        ),
+        Mystyle().fixSizeBox(),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            createimg(('Pak7'), Pak1(nameImage: 'Pak7', title: 'เครื่องกล7',)),
-            createimg(('Pak8'), Pak1(nameImage: 'Pak8', title: 'เครื่องกล75',)),
+            createimg(
+                ('Pak7'),
+                Pak1(
+                  nameImage: 'Pak7',
+                  title: 'ภาควิชาเทคโนโลยีวิศวกรรมอิเล็กทรอนิกส์',
+                  category: categorys[6],
+                )),
+            createimg(
+                ('Pak8'),
+                Pak1(
+                  nameImage: 'Pak8',
+                  title: 'ภาควิชาการจัดการเทคโนโลยีการผลิตและสารสนเทศ',
+                  category: categorys[7],
+                )),
           ],
-        ),Mystyle().fixSizeBox(),
+        ),
+        Mystyle().fixSizeBox(),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            createimg(('Pak9'), Pak1(nameImage: 'Pak9', title: 'เครื่องกล354',)),
-            createimg(('Pak10'), Pak1(nameImage: 'Pak10', title: 'เครื่องกล412',)),
+            createimg(
+                ('Pak9'),
+                Pak1(
+                  nameImage: 'Pak9',
+                  title: 'ภาควิชาเทคโนโลยีวิศวกรรมการเชื่อม',
+                  category: categorys[8],
+                )),
+            createimg(
+                ('Pak10'),
+                Pak1(
+                  nameImage: 'Pak10',
+                  title: 'โรงเรียนตรียมวิศวกรรมศาสตร์ไทย-เยอรมัน',
+                  category: categorys[9],
+                )),
           ],
         ),
       ],

@@ -35,7 +35,7 @@ class _ShowiistDownloadState extends State<ShowiistDownload> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('List Download'),
+          title: Text('ดาวน์โหลด'),
         ),
         body: fileNames.length == 0
             ? Center(

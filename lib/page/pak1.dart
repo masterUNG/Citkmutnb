@@ -12,7 +12,6 @@ class Pak1 extends StatefulWidget {
 }
 
 class _Pak1State extends State<Pak1> {
-
   String nameImage, title, category;
 
   @override
@@ -34,7 +33,7 @@ class _Pak1State extends State<Pak1> {
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
               SliverAppBar(
-                title: title == null ? Text('ภาควิชา') : Text(title),
+                title: title == null ? Text('') : Text(title),
                 snap: true,
                 floating: true,
                 elevation: 6,
@@ -67,8 +66,10 @@ class _Pak1State extends State<Pak1> {
           },
           body: TabBarView(
             children: <Widget>[
-              Detailpak1(category: 'testCat',),
-              Classroompak1(),
+              Detailpak1(
+                category: category,
+              ),
+              ClassRoomPak1(category: category,),
             ],
           ),
         ),
