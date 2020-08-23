@@ -29,7 +29,7 @@ class _SylbomState extends State<Sylbom> {
       );
 
   Text symbol1() => Text(
-      'สัญลักษณ์แห่งความหลักแหลม เชี่ยวชาญในการประยุกต์องค์ความรู้ สู่การสร้าง ออกแบบและพัฒนางาน เทคโนโลยี และนวัตกรรม ให้สามารถใช้งานและเกิดประโยชน์ได้อย่างแท้จริงซึ่งเป็นคุณลักษณะและวัฒนธรรมการคิดเป็น ทำเป็น สามารถสร้างงาน สิ่งประดิษฐ์ และนวัตกรรม ให้ใช้ประโยชน์ได้จริงของประชาคมชาว มจพ. มาตั้งแต่ก่อตั้งมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (มจพ.) ด้วยความร่วมมือทางด้านวิชาการและเศรษฐกิจระหว่างรัฐบาลไทยและรัฐบาลเยอรมันเมื่อวันที่ 19 กุมภาพันธ์ พ.ศ. 2502 จนกระทั่งปัจจุบัน');
+      '   สัญลักษณ์แห่งความหลักแหลม เชี่ยวชาญในการประยุกต์องค์ความรู้ สู่การสร้าง ออกแบบและพัฒนางาน เทคโนโลยี และนวัตกรรม ให้สามารถใช้งานและเกิดประโยชน์ได้อย่างแท้จริงซึ่งเป็นคุณลักษณะและวัฒนธรรมการคิดเป็น ทำเป็น สามารถสร้างงาน สิ่งประดิษฐ์ และนวัตกรรม ให้ใช้ประโยชน์ได้จริงของประชาคมชาว มจพ. มาตั้งแต่ก่อตั้งมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (มจพ.) ด้วยความร่วมมือทางด้านวิชาการและเศรษฐกิจระหว่างรัฐบาลไทยและรัฐบาลเยอรมันเมื่อวันที่ 19 กุมภาพันธ์ พ.ศ. 2502 จนกระทั่งปัจจุบัน');
   Text symbol2() => Text(
-      'Die Entwicklung des Scheibenfräsers steht beispielhaft für die Innovationskraft und Expertise der KMUTNB in technologischer Entwicklung und Anwendung. Diese Kompetenzen, verbunden mit ihrer Nutzbarmachung für die Gesellschaft, markieren das besondere Profil und die Tradition der Universität, die am 19. Februar 1959 als Ergebnis der thai-deutschen Kooperation gegründet wurde.');
+      '   Die Entwicklung des Scheibenfräsers steht beispielhaft für die Innovationskraft und Expertise der KMUTNB in technologischer Entwicklung und Anwendung. Diese Kompetenzen, verbunden mit ihrer Nutzbarmachung für die Gesellschaft, markieren das besondere Profil und die Tradition der Universität, die am 19. Februar 1959 als Ergebnis der thai-deutschen Kooperation gegründet wurde.');
 }

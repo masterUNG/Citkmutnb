@@ -38,20 +38,20 @@ class _StoryState extends State<Story> {
 
   // Text story1() => Text('');
   Text story1() => Text(
-      'ผลิตวิศวกรและนักเทคโนโลยีเฉพาะทางเพื่อพัฒนาอุตสาหกรรมในระดับนานาชาติ');
+      '   ผลิตวิศวกรและนักเทคโนโลยีเฉพาะทางเพื่อพัฒนาอุตสาหกรรมในระดับนานาชาติ');
   Text story2() => Text(
-      '(To Produce Engineers and Technologists Specialized in Specific Fields to Develop the Industries toward International Forum)');
+      '   (To Produce Engineers and Technologists Specialized in Specific Fields to Develop the Industries toward International Forum)');
   Text story3() =>
-      Text('มุ่งมั่นสร้างบัณฑิตเฉพาะทางและนวัตกรที่มีคุณธรรมคู่คุณภาพ');
+      Text('   มุ่งมั่นสร้างบัณฑิตเฉพาะทางและนวัตกรที่มีคุณธรรมคู่คุณภาพ');
   Text story4() => Text(
-      '(To Produce Specialized Graduates and Innovators with Ethics and Morality)');
+      '   (To Produce Specialized Graduates and Innovators with Ethics and Morality)');
   Text story5() =>
-      Text('บัณฑิตเฉพาะทางบูรณาการเทคโนโลยีสร้างนวัตกรรมมุ่งสู่สากล');
+      Text('   บัณฑิตเฉพาะทางบูรณาการเทคโนโลยีสร้างนวัตกรรมมุ่งสู่สากล');
   Text story6() => Text(
-      '(Specialized Graduates, Integrating Technology. Creating Innovation, Moving towards to International Forum)');
-  Text story7() => Text('บัณฑิตที่ทักษะดีปฏิบัติเด่นเน้นความรู้เฉพาะทาง');
+      '   (Specialized Graduates, Integrating Technology. Creating Innovation, Moving towards to International Forum)');
+  Text story7() => Text('   บัณฑิตที่ทักษะดีปฏิบัติเด่นเน้นความรู้เฉพาะทาง');
   Text story8() => Text(
-      '(Graduates with Competent Skills, Outstanding Practices and Specialized Knowledges)');
-  Text story9() => Text('องค์กรแห่งการสร้างสรรค์ประดิษฐกรรมสู่นวัฒกรรม');
-  Text story10() => Text('(Organization of Creative invention to innovation)');
+      '   (Graduates with Competent Skills, Outstanding Practices and Specialized Knowledges)');
+  Text story9() => Text('   องค์กรแห่งการสร้างสรรค์ประดิษฐกรรมสู่นวัฒกรรม');
+  Text story10() => Text('   (Organization of Creative invention to innovation)');
 }
